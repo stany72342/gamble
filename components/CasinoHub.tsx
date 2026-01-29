@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dice5, CircleDot, Bomb, Coins, ArrowRight } from 'lucide-react';
+import { Dice5, CircleDot, Bomb, Coins, ArrowRight, CircleDollarSign, ArrowUp } from 'lucide-react';
 
 interface CasinoHubProps {
   onSelectGame: (gameId: string) => void;
@@ -7,6 +7,26 @@ interface CasinoHubProps {
 
 export const CasinoHub: React.FC<CasinoHubProps> = ({ onSelectGame }) => {
   const games = [
+    {
+      id: 'coinflip',
+      name: 'Coin Flip',
+      description: 'Heads or Tails. Double your money instantly.',
+      icon: CircleDollarSign,
+      color: 'from-blue-600 to-blue-900',
+      textColor: 'text-blue-400',
+      minBet: '$1',
+      maxWin: '2x'
+    },
+    {
+      id: 'highlow',
+      name: 'High Low',
+      description: 'Guess if the next card is higher or lower. Build your streak.',
+      icon: ArrowUp,
+      color: 'from-indigo-600 to-violet-900',
+      textColor: 'text-indigo-400',
+      minBet: '$100',
+      maxWin: 'Unlimited'
+    },
     {
       id: 'blackjack',
       name: 'Blackjack',
@@ -60,7 +80,7 @@ export const CasinoHub: React.FC<CasinoHubProps> = ({ onSelectGame }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {games.map((game, index) => (
           <button
             key={game.id}

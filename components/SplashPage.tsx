@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, Check, Scale, AlertTriangle } from 'lucide-react';
+import { ShieldAlert, Check, Scale, AlertTriangle, Gavel } from 'lucide-react';
 
 interface SplashPageProps {
   onAccept: () => void;
@@ -46,12 +46,24 @@ export const SplashPage: React.FC<SplashPageProps> = ({ onAccept }) => {
                     <Scale size={18} />
                 </div>
                 <div>
-                    <h4 className="font-bold text-white text-sm">Rules & Terms</h4>
+                    <h4 className="font-bold text-white text-sm">Fair Play & Economy</h4>
                     <p className="text-xs text-slate-400 leading-relaxed">
-                        1. <strong>No Real Money Trading:</strong> Items in this game have no real-world cash value.<br/>
-                        2. <strong>Fair Play:</strong> Exploiting bugs or using automation software is strictly prohibited.<br/>
-                        3. <strong>Respect:</strong> Harassment or toxic behavior is not tolerated.<br/>
-                        By entering, you agree to these rules and our Terms of Service.
+                        1. <strong>ZERO TOLERANCE:</strong> Any form of item duplication ("duping"), exploiting inventory glitches, or manipulating trade packets will result in an instant, permanent HWID ban.<br/>
+                        2. <strong>No RWT:</strong> Real World Trading is strictly prohibited.<br/>
+                        3. <strong>No Alt Farming:</strong> Creating multiple accounts to farm starter cases is forbidden.<br/>
+                        4. <strong>No Scripts:</strong> Automation of gambling or case opening is a banable offense.
+                    </p>
+                </div>
+             </div>
+
+             <div className="flex gap-4 items-start">
+                <div className="mt-1 bg-yellow-900/30 p-1.5 rounded text-yellow-500">
+                    <Gavel size={18} />
+                </div>
+                <div>
+                    <h4 className="font-bold text-white text-sm">Rules & Conduct</h4>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                        Harassment, hate speech, or toxic behavior in global chat will result in an immediate mute or ban. Be respectful.
                     </p>
                 </div>
              </div>

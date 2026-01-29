@@ -219,7 +219,7 @@ export const FAKE_MESSAGES = [
 ];
 
 export const INITIAL_STATE: GameState = {
-  dbVersion: 1,
+  dbVersion: 2, // BUMPED TO 2 to force config updates
   username: null,
   role: 'USER',
   isAdmin: false, 
@@ -259,7 +259,7 @@ export const INITIAL_STATE: GameState = {
       upgradeBaseChanceMultiplier: 1,
       casePriceMultiplier: 1,
       sellValueMultiplier: 1,
-      maintenanceMode: false,
+      maintenanceMode: false, // Set this to TRUE and bump dbVersion to force maintenance for all users
       activeEvent: null,
       announcement: null,
       activeGiveaway: null,
